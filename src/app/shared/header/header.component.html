@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="['']"><button mat-flat-button color="primary" >
+    <img logo src="./../../../assets/icons/logo.png">
+  </button></a>
+  <span>Frozen Sick</span>
+  <span class="example-spacer"></span>
+  <div class="desktop-options">
+    <a [routerLink]="['/campanha']"><button mat-flat-button color="primary">
+      <img small-logo src="./../../../assets/icons/campanha.png">
+      <span>Campanha</span>
+    </button></a>
+    <a [routerLink]="['/characters']"><button mat-flat-button color="primary">
+      <img logo src="./../../../assets/icons/characters.png">
+      <span>Personagens</span>
+    </button></a>
+    <a [routerLink]="['/monsters']"><button mat-flat-button color="primary">
+      <img logo src="./../../../assets/icons/monster.png">
+      <span>Monstros</span>
+    </button></a>
+  </div>
+  <div class="phone-options">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item class="dropdown-item"  [routerLink]="['/campanha']">
+            <img dropdown-logo src="./../../../assets/icons/campanha_black.png">
+            <span>Campanha</span>
+          </button>
+          <button mat-menu-item class="dropdown-item" [routerLink]="['/characters']">
+            <img dropdown-logo src="./../../../assets/icons/characters_black.png">
+            <span>Personagens</span>
+          </button>
+          <button mat-menu-item class="dropdown-item" [routerLink]="['/monsters']">
+            <img dropdown-logo src="./../../../assets/icons/monster_black.png">
+            <span>Monstros</span>
+          </button>
+        </mat-menu>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

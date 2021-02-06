@@ -1,0 +1,33 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img[logo] {
+  width: 50px;
+}
+img[small-logo] {
+  width: 40px;
+}
+img[dropdown-logo] {
+  width: 30px;
+}
+.phone-options {
+  display: none;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .desktop-options {
+    display: none;
+  }
+  .phone-options {
+    display: block;
+  }
+}
