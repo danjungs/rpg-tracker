@@ -1,8 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="header">
   <a [routerLink]="['']"><button mat-flat-button color="primary" >
     <img logo src="./../../../assets/icons/logo.png">
   </button></a>
-  <span>Frozen Sick</span>
+  <span>RPG Tracker</span>
   <span class="example-spacer"></span>
   <div class="desktop-options">
     <a [routerLink]="['/campanha']"><button mat-flat-button color="primary">
@@ -38,4 +38,5 @@
         </mat-menu>
   </div>
 </mat-toolbar>
+<div class="margin-header"></div>
 <router-outlet></router-outlet>

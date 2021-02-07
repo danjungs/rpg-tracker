@@ -1,3 +1,7 @@
+.header {
+  position: fixed;
+  z-index: 2;
+}
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -22,12 +26,17 @@ img[dropdown-logo] {
   display: flex;
   align-items: center;
 }
-
+.margin-header {
+  height: 64px;
+}
 @media (max-width: 600px) {
   .desktop-options {
     display: none;
   }
   .phone-options {
     display: block;
+  }
+  .margin-header {
+    height: 54px;
   }
 }
