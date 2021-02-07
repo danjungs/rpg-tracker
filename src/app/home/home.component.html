@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="home-container">
+  <div class="banner-container">
+    <app-paralax-banner [data]="homeBanner"></app-paralax-banner>
+  </div>
+  <div class="card-container">
+    <app-landscape-card *ngFor="let card of homeCards" [card]="card"></app-landscape-card>
+  </div>
+</div>
