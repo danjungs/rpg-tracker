@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampanhaComponent } from './campanha/campanha.component';
@@ -25,6 +26,7 @@ const ROUTES: Routes = [
   declarations: [CampanhaComponent, CampanhaHomeComponent, CampanhaDetailsComponent],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(ROUTES)
   ]
 })

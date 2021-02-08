@@ -5,8 +5,14 @@
   background: #683ab6;
   color: white;
 }
-.title-card {
-  width: 100%;
-  margin: 0;
+.text-container {
   text-align: center;
+  .text-card {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+.big-card {
+  max-width: 400px;
 }

@@ -1,0 +1,21 @@
+.banner-container {
+  height: 50%;
+}
+.campanha-container {
+  width: 100%;
+  height: 100%;
+}
+.card-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.container {
+  background: #D3D3D3;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}

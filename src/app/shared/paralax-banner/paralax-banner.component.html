@@ -1,6 +1,6 @@
 <div class="banner {{data.image}}">
   <div class="caption">
     <span class="border">{{data.caption}}</span>
-    <span class="border sub-caption">{{data.subCaption}}</span>
+    <span class="border sub-caption" *ngIf="data.subCaption">{{data.subCaption}}</span>
   </div>
 </div>

@@ -1,6 +1,8 @@
 .home-banner {
     background-image: url('./../../../assets/imagens/home-illustration.jpg');
-    min-height: 100%;
+}
+.campanha-banner {
+  background-image: url('./../../../assets/imagens/campanha-card.png');
 }
 .banner {
     position: relative;
@@ -9,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100%;
 }
 .caption {
   position: absolute;
