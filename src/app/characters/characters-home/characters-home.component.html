@@ -1,1 +1,8 @@
-<p>characters-home works!</p>
+<div class="characters-container container">
+  <div class="banner-container">
+    <app-paralax-banner [data]="charactersBanner"></app-paralax-banner>
+  </div>
+  <div class="table-container">
+    <app-characters-table [dataSource]="characters"></app-characters-table>
+  </div>
+</div>

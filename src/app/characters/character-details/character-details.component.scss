@@ -1,0 +1,567 @@
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
+
+.hide {
+  display: none !important;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+div.box {
+  margin-top: 10px;
+}
+
+div.container {
+  width: 1000px;
+  padding: 20px 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+div.textblock {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+  .label {
+    text-align: center;
+    border: 1px solid black;
+    border-top: 0;
+    font-size: 10px;
+    width: calc(100% - 20px - 2px);
+    border-radius: 0 0 10px 10px;
+    padding: 4px 0;
+    font-weight: bold;
+  }
+  .textarea {
+    border: 1px solid black;
+    font-size: 12px;
+    text-align: left;
+    width: calc(100% - 20px - 2px);
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    overflow: hidden;
+    height: 100%;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-image: none;
+    display: block;
+  }
+
+}
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  align-contents: stretch;
+  align-items: stretch;
+  .charname {
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 0;
+    background-color: #eee;
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    .charname-input {
+      padding: 0.5em;
+      margin: 5px;
+      border: 1px solid grey;
+      border-radius: 10px 0 0 10px;
+      background: white;
+    }
+    .charname-label {
+      padding-left: 1em;
+    }
+  }
+  .misc {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    ul {
+      padding: 10px 0px 5px 0px;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 33.33333%;
+        display: flex;
+        flex-direction: column-reverse;
+        .misc-label {
+          margin-bottom: 5px;
+          color: #676767;
+        }
+        .misc-input {
+          border: 0;
+          border-bottom: 1px solid #ddd;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+ .main {
+	display: flex;
+	justify-content: space-between;
+  margin-top: 20px;
+  .section {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    .attributes {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;;
+      div.scores {
+        width: 101px;
+        height: 710px;
+        background-color: #bbb;
+        border-radius: 10px;
+        padding-bottom: 5px;
+        label {
+          font-size: 8px;
+          font-weight: bold;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          height: 100%;
+          li {
+            height: 80px;
+            width: 80px;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            align-items: center;
+            div.score {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            height: 100%;
+            justify-content: space-around;
+              .score-input {
+                text-align: center;
+                font-size: 40px;
+                padding: 2px 0px 0px 0px;
+                background: white;
+              }
+            }
+            div.modifier {
+              margin-bottom: -10px;
+              margin-top: 10px;
+              .modifier-input {
+                background: white;
+                width: 30px;
+                height: 20px;
+                border: 1px inset black;
+                border-radius: 20px;
+                margin: -1px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .attr-applications{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div.inspiration {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        div.list-section {
+          border: 1px solid black;
+          border-radius: 10px;
+          padding: 10px 5px;
+          div.label {
+            margin-top: 10px;
+            margin-bottom: 2.5px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+          }
+          ul{
+            li {
+              display: flex;
+              align-items: center;
+              * {
+                margin-left: 5px;
+              }
+              .saves-label {
+                text-transform: none;
+                font-size: 12px;
+                text-align: left;
+                order: 3;
+                span.skill {
+                  color: #bbb;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    div.passive-perception {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      input {
+        width: 30px;
+        height: 28px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+    }
+    .combat {
+      background-color: #eee;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      div {
+        overflow: hidden;
+      }
+      div.armorclass, div.initiative, div.speed {
+        flex-basis: 33.333%;
+        div {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          margin-top: 10px;
+          .combat-label {
+            font-size: 10px;
+            width: 50px;
+            border: 1px solid black;
+            border-top: 0;
+            background-color: white;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 0 0 10px 10px;
+            margin-top: 0;
+          }
+          .combat-input {
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+          }
+        }
+      }
+      div.hp {
+        flex-basis: 100%;
+        div.regular {
+          background-color: white;
+          border: 1px solid black;
+          margin: 10px;
+          margin-bottom: 5px;
+          border-radius: 10px 10px 0 0;
+          div.max {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            .max-label {
+              font-size: 10px;
+              text-transform: none;
+              color: #bbb;
+            }
+            .max-input {
+              width: 40%;
+              border: 0;
+              border-bottom: 1px solid #ddd;
+              font-size: 12px;
+              text-align: center;
+            }
+          }
+          div.current {
+            display: flex;
+            flex-direction: column-reverse;
+            .current-input {
+              border: 0;
+              width: 100%;
+              padding: 1em 0;
+              font-size: 20px;
+              text-align: center;
+            }
+            .current-label {
+              font-size: 10px;
+              padding-bottom: 5px;
+              text-align: center;
+              font-weight: bold;
+            }
+          }
+        }
+        div.temporary {
+          margin: 10px;
+          margin-top: 0;
+          border: 1px solid black;
+          border-radius: 0 0 10px 10px;
+          display: flex;
+          flex-direction: column-reverse;
+          background-color: white;
+          .temporary-input {
+            padding: 1em 0;
+            font-size: 20px;
+            border: 0;
+            text-align: center;
+          }
+          .temporary-label {
+            font-size: 10px;
+            padding-bottom: 5px;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+      }
+      div.hitdice, div.deathsaves {
+        flex-basis: 50%;
+        height: 100px;
+        div.dice {
+          background-color: white;
+          margin: 10px;
+          border: 1px solid black;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          div.total {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-around;
+            padding: 5px 0;
+            .total-label {
+              font-size: 10px;
+              color: #bbb;
+              margin: 0.25em;
+              text-transform: none;
+            }
+            .total-input {
+              font-size: 12px;
+              flex-grow: 1;
+              border: 0;
+              border-bottom: 1px solid #ddd;
+              width: 50%;
+              margin-right: 0.25em;
+              padding: 0 0.25em;
+              text-align: center;
+            }
+          }
+          div.remaining {
+            flex: 1;
+            display: flex;
+            flex-direction: column-reverse;
+            .remaining-label {
+              text-align: center;
+              padding: 2px;
+              font-size: 10px;
+            }
+            .remaining-input {
+              text-align: center;
+              border: 0;
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+    .flavor {
+      padding: 10px;
+      background: #bbb;
+      border-radius: 10px;
+      height: 420px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      div.personality, div.ideals, div.bonds, div.flaws {
+        background: white;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5px;
+        border: 1px solid black;
+        .flavor-label {
+          text-align: center;
+          font-size: 10px;
+          margin-top: 3px;
+        }
+        .flavor-textarea {
+          border: 0;
+          border-radius: 0;
+          height: 4em;
+        }
+      }
+      div.personality {
+        border-radius: 10px 10px 0 0;
+      }
+      div.flaws {
+        border-radius: 0 0 10px 10px ;
+      }
+    }
+    .features {
+      padding: 10px;
+      div.features-box {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        .features-label {
+          text-align: center;
+        }
+        .features-textarea {
+          border: 0;
+          padding: 5px;
+          height: 43em;
+        }
+      }
+    }
+  }
+}
+.label-container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  border: 1px solid black;
+  border-left: 0;
+  text-align: center;
+  .inspiration-label {
+    width: 130px;
+  }
+}
+.inspiration-input {
+  appearance: none;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.div.label-container {
+	position: relative;
+	width: 100%;
+	height: 18px;
+	margin-top: 6px;
+	border: 1px solid black;
+	border-left: 0;
+	text-align: center;
+}
+
+div.otherprofs {
+    height: 26em;
+}
+.attacksandspellcasting {
+	border: 1px solid black;
+	border-radius: 10px;
+  margin-top: 10px;
+  div {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    .attack-label {
+      order: 3;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      th {
+        font-size: 10px;
+        color: #ddd;
+      }
+      .attack-input {
+        width: calc(100% - 4px);
+        border: 0;
+        margin: 0;
+        background-color: #eee;
+        font-size: 10px;
+        padding: 3px;
+      }
+    }
+    .attack-textarea {
+      border: 0;
+      height: 13em;
+    }
+  }
+}
+div.equipment {
+	border: 1px solid black;
+	border-radius: 10px;
+  margin-top: 10px;
+  div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    div.money{
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 115%;
+        li {
+          display: flex;
+          align-items: center;
+          .money-label {
+            border: 1px solid black;
+            border-radius: 10px 0 0 10px;
+            border-right: 0;
+            width: 20px;
+            font-size: 12px;
+            justify-content: center;
+            padding: 3px 0;
+          }
+          .money-input {
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 40px;
+            padding: 7px 3px;
+            font-size: 12px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .equipment-label {
+      order: 3;
+      justify-content: center;
+      flex: 100%;
+    }
+    .equipment-textarea {
+      flex: 1;
+      border: 0;
+    }
+  }
+}
