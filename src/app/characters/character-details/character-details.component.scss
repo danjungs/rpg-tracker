@@ -1,30 +1,12 @@
-.red {
-  background: red;
-}
-
-.blue {
-  background: blue;
-}
-
-.hide {
-  display: none !important;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-}
-
 div.box {
   margin-top: 10px;
 }
-
 div.container {
   width: 1000px;
   padding: 20px 50px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 div.textblock {
   display: flex;
   flex-direction: column-reverse;
