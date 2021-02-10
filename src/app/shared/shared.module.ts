@@ -5,11 +5,14 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ParalaxBannerComponent } from './paralax-banner/paralax-banner.component';
 import { LandscapeCardComponent } from './cards/landscape-card/landscape-card.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 const sharedComponents = [
   HeaderComponent,
   ParalaxBannerComponent,
-  LandscapeCardComponent
+  LandscapeCardComponent,
+  SearchBarComponent
 ]
 
 @NgModule({
@@ -17,7 +20,8 @@ const sharedComponents = [
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   exports: [...sharedComponents]
 })

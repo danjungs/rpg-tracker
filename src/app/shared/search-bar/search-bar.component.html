@@ -1,0 +1,11 @@
+<div class="search-bar">
+  <select [(ngModel)]="keySelect">
+      <option [ngValue]="firstOption" selected>
+        Nome
+      </option>
+    <option *ngFor="let currentData of selectOptions" [ngValue]="currentData.key">
+        {{currentData.name}}
+    </option>
+  </select>
+  <input type="search" [(ngModel)]="value" (ngModelChange)="dataChanged($event)">
+</div>
