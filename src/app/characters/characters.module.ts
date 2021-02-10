@@ -7,6 +7,8 @@ import { CharactersHomeComponent } from './characters-home/characters-home.compo
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CharactersTableComponent } from './characters-home/characters-table/characters-table.component';
+import { HeaderSheetComponent } from './character-details/character-header-sheet/character-header-sheet.component';
+import { CharacterMainSheetComponent } from './character-details/character-main-sheet/character-main-sheet.component';
 
 const ROUTES: Routes = [
   {
@@ -25,7 +27,7 @@ const ROUTES: Routes = [
 ];
 
 @NgModule({
-  declarations: [CharactersComponent, CharactersHomeComponent, CharacterDetailsComponent, CharactersTableComponent],
+  declarations: [CharactersComponent, CharactersHomeComponent, CharacterDetailsComponent, CharactersTableComponent, HeaderSheetComponent, CharacterMainSheetComponent],
   imports: [
     CommonModule,
     SharedModule,

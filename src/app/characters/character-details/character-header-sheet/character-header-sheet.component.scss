@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  align-contents: stretch;
+  align-items: stretch;
+  .charname {
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 5px 0;
+    background-color: #eee;
+    width: 30%;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    .charname-input {
+      padding: 0.5em;
+      margin: 5px;
+      border: 1px solid grey;
+      border-radius: 10px 0 0 10px;
+      background: white;
+    }
+
+    .charname-label {
+      padding-left: 1em;
+    }
+  }
+
+  .misc {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    ul {
+      padding: 10px 0px 5px 0px;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 33.33333%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .misc-label {
+          margin-bottom: 5px;
+          color: #676767;
+        }
+
+        .misc-input {
+          border: 0;
+          border-bottom: 1px solid #ddd;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
