@@ -1,4 +1,4 @@
-import { CharacterInterface } from './../interface/interface';
+import { CharacterInterface } from './../interface/characters.interface';
 
 
 const getIcon = (name) => "./../../assets/imagens/" + name
@@ -86,3 +86,9 @@ export const CHARACTERS_BANNER = {
   caption: 'Personagens',
   image: 'characters-banner'
 };
+
+export const CHARACTERS_SEARCH_OPTIONS = [
+  { name : "Classe", key: "class"},
+  { name : "Raça", key: "race"},
+  { name : "Jogador", key: "player"},
+]
