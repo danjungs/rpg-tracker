@@ -2,6 +2,9 @@
   <div class="banner-container">
     <app-paralax-banner [data]="charactersBanner"></app-paralax-banner>
   </div>
+  <div class="search-bar">
+    <app-search-bar [selectOptions]="searchBarOptions" firstOption="charname" (inputChanged)="dataChanged($event)"></app-search-bar>
+  </div>
   <div class="table-container">
     <app-characters-table [dataSource]="characters"></app-characters-table>
   </div>

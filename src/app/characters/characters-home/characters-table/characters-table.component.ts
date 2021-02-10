@@ -1,4 +1,4 @@
-import { CharacterInterface } from './../../../interface/interface';
+import { CharacterInterface } from './../../../interface/characters.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
