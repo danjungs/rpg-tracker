@@ -1,1 +1,11 @@
-<p>monsters-home works!</p>
+<div class="characters-container container">
+  <div class="banner-container">
+    <app-paralax-banner [data]="monstersBanner"></app-paralax-banner>
+  </div>
+  <div class="search-bar">
+    <app-search-bar [selectOptions]="searchBarOptions" firstOption="monstername" (inputChanged)="dataChanged($event)"></app-search-bar>
+  </div>
+  <div class="table-container">
+    <app-monsters-table [dataSource]="monsters"></app-monsters-table>
+  </div>
+</div>
