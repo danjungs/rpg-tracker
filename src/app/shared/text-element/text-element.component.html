@@ -7,7 +7,13 @@
       <p [innerHTML]="element.text" ></p>
   </div>
   <h4 class="sub-chapter-title" [id]="element.tag"  *ngSwitchCase="'title'">{{element.text}}</h4>
+  <ul *ngSwitchCase="'list'" class="list">
+    <li *ngFor="let item of element.list">
+      <p [innerHTML]="item" class="normal" ></p>
+    </li>
+  </ul>
   <div class="normal-container" *ngSwitchDefault>
-    <p [innerHTML]="element.text" class="normal" ></p>
+    <p *ngIf="element.title" [innerHTML]="element.title" class="bolded-title"></p>
+    <p [innerHTML]="element.text" class="normal"></p>
   </div>
 </div>

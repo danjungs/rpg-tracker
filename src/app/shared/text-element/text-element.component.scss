@@ -2,7 +2,10 @@ p.normal {
   font-size: 16px;
   line-height: 30px;
 }
-
+.bolded-title {
+  font-size: 17px;
+  font-weight: bold;
+}
 div.card-container {
   background: #fff;
   margin: 20px 0;
@@ -24,9 +27,17 @@ div.card-container {
   padding: 20px 20px 10px;
 }
 .sub-chapter-title {
+  margin-top: 20px;
   width: 100%;
   border-bottom: 2px solid #683ab6;
   text-align: left;
   font-weight: 400;
   font-size: 20px;
+}
+ul.list {
+  padding-left: 15px;
+  ::marker {
+    color: #683ab6;
+    font-size: 1.5em;
+  }
 }
