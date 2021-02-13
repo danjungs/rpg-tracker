@@ -1,3 +1,4 @@
+import { MaterialModule } from './../material/material.module';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -5,6 +6,7 @@ import { CampanhaComponent } from './campanha/campanha.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CampanhaHomeComponent } from './campanha-home/campanha-home.component';
 import { CampanhaDetailsComponent } from './campanha-details/campanha-details.component';
+import { QuickMenuComponent } from './campanha-details/quick-menu/quick-menu.component';
 
 const ROUTES: Routes = [
   {
@@ -23,11 +25,12 @@ const ROUTES: Routes = [
 ];
 
 @NgModule({
-  declarations: [CampanhaComponent, CampanhaHomeComponent, CampanhaDetailsComponent],
+  declarations: [CampanhaComponent, CampanhaHomeComponent, CampanhaDetailsComponent, QuickMenuComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(ROUTES)
+    MaterialModule,
+    RouterModule.forChild(ROUTES),
   ]
 })
 export class CampanhaModule { }
