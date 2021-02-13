@@ -1,0 +1,32 @@
+p.normal {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+div.card-container {
+  background: #fff;
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  border: 1px solid #683ab6;;
+  padding: 10px;
+  .card-title {
+    font-weight: bold;
+  }
+}
+.rol-container {
+  background: #f1e4c8;
+  margin: 20px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  border-left: 2px solid #c2a67b;
+  border-right: 2px solid #c2a67b;
+  padding: 20px 20px 10px;
+}
+.sub-chapter-title {
+  width: 100%;
+  border-bottom: 2px solid #683ab6;
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+}

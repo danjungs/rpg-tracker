@@ -7,12 +7,14 @@ import { ParalaxBannerComponent } from './paralax-banner/paralax-banner.componen
 import { LandscapeCardComponent } from './cards/landscape-card/landscape-card.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { TextElementComponent } from './text-element/text-element.component';
 
 const sharedComponents = [
   HeaderComponent,
-  ParalaxBannerComponent,
   LandscapeCardComponent,
-  SearchBarComponent
+  ParalaxBannerComponent,
+  SearchBarComponent,
+  TextElementComponent
 ]
 
 @NgModule({

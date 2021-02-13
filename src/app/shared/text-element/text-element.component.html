@@ -1,0 +1,13 @@
+<div class="text-container" [ngSwitch]="element.type">
+  <div class="card-container" *ngSwitchCase="'card'">
+    <h4 class="card-title">{{element.text.title}}</h4>
+    <p [innerHTML]="element.text.text" ></p>
+  </div>
+  <div class="rol-container" *ngSwitchCase="'read-out-loud'">
+      <p [innerHTML]="element.text" ></p>
+  </div>
+  <h4 class="sub-chapter-title" [id]="element.tag"  *ngSwitchCase="'title'">{{element.text}}</h4>
+  <div class="normal-container" *ngSwitchDefault>
+    <p [innerHTML]="element.text" class="normal" ></p>
+  </div>
+</div>
