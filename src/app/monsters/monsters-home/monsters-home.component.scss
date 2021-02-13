@@ -1,8 +1,9 @@
 .banner-container {
   height: 50vh;
 }
-.characters-container {
-  width: 100%;
+.monsters-container {
+  min-width: 100%;
+  width: fit-content;
   min-height: 100%;
 
 }
