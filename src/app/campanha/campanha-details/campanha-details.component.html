@@ -1,1 +1,13 @@
-<p>campanha-details works!</p>
+<div class="container-wrapper">
+  <div class="quick-menu-container">
+      <app-quick-menu [quickmenuContent]="quickMenuContent"></app-quick-menu>
+  </div>
+  <div class="history-section" id="top">
+    <h2 class="campain-title title">{{campanha.title}}</h2>
+    <p [innerHTML]="campanha.overview"></p>
+    <div *ngFor="let chapter of campanha.chapters" [id]="chapter.tag" class="chapter-container">
+      <h3 class="chapters-title title">{{chapter.title}}</h3>
+      <app-text-element *ngFor="let text of chapter.textArea" [element]="text"></app-text-element>
+    </div>
+  </div>
+</div>
