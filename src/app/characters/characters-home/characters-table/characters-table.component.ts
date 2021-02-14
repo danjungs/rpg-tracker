@@ -13,7 +13,4 @@ export class CharactersTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClick(row) {
-    console.log(row, 'AAAAA')
-  }
 }

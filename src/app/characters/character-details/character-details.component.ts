@@ -18,7 +18,6 @@ export class CharacterDetailsComponent implements OnInit {
       if( !this.character) {
         //TODO ERROR CHARACTER
       }
-      console.log(this.character)
     })
   }
 

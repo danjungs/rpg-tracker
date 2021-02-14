@@ -12,7 +12,6 @@ export class TextElementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.element.type)
   }
 
 }

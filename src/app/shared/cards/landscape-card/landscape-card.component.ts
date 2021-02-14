@@ -10,7 +10,6 @@ export class LandscapeCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.card)
   }
 
 }
