@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { QuickMenuInterface } from 'src/app/interface/campanha.interface';
 import { ViewportScroller } from '@angular/common';
 
@@ -7,7 +7,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './quick-menu.component.html',
   styleUrls: ['./quick-menu.component.scss']
 })
-export class QuickMenuComponent implements OnInit {
+export class QuickMenuComponent implements OnInit, OnDestroy {
   @Input() quickmenuContent: QuickMenuInterface;
   constructor(private viewportScroller: ViewportScroller) { }
 
@@ -26,10 +26,12 @@ export class QuickMenuComponent implements OnInit {
   scrollToTag(id) {
     this.viewportScroller.setOffset([0,100])
     this.viewportScroller.scrollToAnchor(id);
-    console.log('aaaa', id)
   }
   scroollAndExpandquickmenu(item) {
     this.expandquickmenu(item);
     this.scrollToTag(item.tag)
+  }
+  ngOnDestroy(): void {
+    this.quickmenuContent.options.forEach((el) => { el.open = false });
   }
 }
