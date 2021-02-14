@@ -1,1 +1,95 @@
-<p>monster-details works!</p>
+<div class="monster-container">
+  <div class="image-container">
+    <img [src]="monster.image" [alt]="monster.id">
+  </div> <!-- img block -->
+  <div class="stat-block wide">
+    <hr class="orange-border" />
+    <div class="section-left">
+      <div class="creature-heading">
+        <h1>{{monster.header.monstername}}</h1>
+        <h2>{{monster.header.size}} {{monster.header.type}}, {{monster.header.alignment}}</h2>
+      </div> <!-- creature heading -->
+      <svg height="5" width="100%" class="tapered-rule">
+        <polyline points="0,0 400,2.5 0,5"></polyline>
+      </svg>
+      <div class="top-stats">
+        <div class="property-line first">
+          <h4>Armor Class</h4>
+          <p> {{monster.attributes.ac}}</p>
+        </div> <!-- property line -->
+        <div class="property-line">
+          <h4>Hit Points</h4>
+          <p> {{monster.attributes.hp}}</p>
+        </div> <!-- property line -->
+        <div class="property-line last">
+          <h4>Speed</h4>
+          <p> {{monster.attributes.speed}}</p>
+        </div> <!-- property line -->
+        <svg height="5" width="100%" class="tapered-rule">
+          <polyline points="0,0 400,2.5 0,5"></polyline>
+        </svg>
+        <div class="abilities">
+          <div class="ability-strength">
+            <h4>STR</h4>
+            <p>{{monster.attributes.str.value}} ({{monster.attributes.str.modifier}})</p>
+          </div> <!-- ability strength -->
+          <div class="ability-dexterity">
+            <h4>DEX</h4>
+            <p>{{monster.attributes.dex.value}} ({{monster.attributes.dex.modifier}})</p>
+          </div> <!-- ability dexterity -->
+          <div class="ability-constitution">
+            <h4>CON</h4>
+            <p>{{monster.attributes.con.value}} ({{monster.attributes.con.modifier}})</p>
+          </div> <!-- ability constitution -->
+          <div class="ability-intelligence">
+            <h4>INT</h4>
+            <p>{{monster.attributes.int.value}} ({{monster.attributes.int.modifier}})</p>
+          </div> <!-- ability intelligence -->
+          <div class="ability-wisdom">
+            <h4>WIS</h4>
+            <p>{{monster.attributes.wis.value}} ({{monster.attributes.wis.modifier}})</p>
+          </div> <!-- ability wisdom -->
+          <div class="ability-charisma">
+            <h4>CHA</h4>
+            <p>{{monster.attributes.cha.value}} ({{monster.attributes.cha.modifier}})</p>
+          </div> <!-- ability charisma -->
+        </div> <!-- abilities -->
+        <div class="property-line" *ngFor="let extraAttribute of monster.extraAttributes; let first = first;"
+          [class.first]="first">
+          <h4>{{extraAttribute.title}}</h4>
+          <p> {{extraAttribute.text}}</p>
+        </div> <!-- property line -->
+        <div class="property-line last">
+          <h4>Challenge</h4>
+          <p> {{monster.challenge}}</p>
+        </div> <!-- property line -->
+      </div> <!-- top stats -->
+      <svg height="5" width="100%" class="tapered-rule">
+        <polyline points="0,0 400,2.5 0,5"></polyline>
+      </svg>
+      <div class="property-block" *ngFor="let feat of monster.feats">
+        <h4>{{feat.title}}.</h4>
+        <p> {{feat.text}}</p>
+      </div> <!-- property block -->
+    </div> <!-- section left -->
+    <div class="section-right">
+      <div class="actions">
+        <h3>Actions</h3>
+        <div class="property-block" *ngFor="let action of monster.actions">
+          <h4>{{action.title}}.</h4>
+          <p [innerHTML]="action.text"></p>
+        </div> <!-- property block -->
+      </div> <!-- actions -->
+      <div *ngIf="monster.legendaryActions">
+        <div class="actions" *ngFor="let action of monster.legendaryActions">
+          <h3>Legendary Actions</h3>
+          <div class="property-block">
+            <h4>{{action.title}}.</h4>
+            <p [innerHTML]="action.text"></p>
+          </div> <!-- property block -->
+        </div> <!-- actions -->
+      </div>
+    </div> <!-- section right -->
+    <hr class="orange-border bottom" />
+  </div> <!-- stat block -->
+</div>

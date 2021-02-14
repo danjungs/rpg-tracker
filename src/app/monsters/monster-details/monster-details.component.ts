@@ -1,4 +1,7 @@
+import { MonsterInterface } from './../../interface/monsters.interface';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { getMonster } from '../monsters.constants';
 
 @Component({
   selector: 'app-monster-details',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./monster-details.component.scss']
 })
 export class MonsterDetailsComponent implements OnInit {
-
-  constructor() { }
+  monster: MonsterInterface;
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      this.monster = getMonster(id);
+      if( !this.monster) {
+        //TODO ERROR CHARACTER
+      }
+    })
   }
 
 }
