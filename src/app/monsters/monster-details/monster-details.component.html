@@ -80,15 +80,6 @@
           <p [innerHTML]="action.text"></p>
         </div> <!-- property block -->
       </div> <!-- actions -->
-      <div *ngIf="monster.legendaryActions">
-        <div class="actions" *ngFor="let action of monster.legendaryActions">
-          <h3>Legendary Actions</h3>
-          <div class="property-block">
-            <h4>{{action.title}}.</h4>
-            <p [innerHTML]="action.text"></p>
-          </div> <!-- property block -->
-        </div> <!-- actions -->
-      </div>
     </div> <!-- section right -->
     <hr class="orange-border bottom" />
   </div> <!-- stat block -->
