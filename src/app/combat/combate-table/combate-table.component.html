@@ -1,0 +1,19 @@
+<div class="container">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Icone</div>
+      <div class="col col-2">Nome</div>
+      <div class="col col-3">Init</div>
+      <div class="col col-4">HP</div>
+      <div class="col col-5">Ações</div>
+    </li>
+    <li class="table-row" *ngFor="let item of combatArray">
+      <div class="col col-1" data-label="Icone"><img [src]="item.image" class="character-icon"></div>
+      <div class="col col-2" data-label="Nome">{{item.name}}</div>
+      <div class="col col-3" data-label="Init">{{item.init}}</div>
+      <div class="col col-4" data-label="HP">Pending</div>
+      <div class="col col-5" data-label="Ações">Pending</div>
+    </li>
+  </ul>
+</div>
+<button mat-flat-button color="primary" (click)="sortOrder()">Ordenar</button>

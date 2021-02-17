@@ -17,6 +17,10 @@
       <img logo src="./../../../assets/icons/monster.png">
       <span>Monstros</span>
     </button></a>
+    <a [routerLink]="['/combat']"><button mat-flat-button color="primary">
+        <img small-logo src="./../../../assets/icons/combat_white_icon.png">
+        <span>Combate</span>
+      </button></a>
   </div>
   <div class="phone-options">
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -34,6 +38,10 @@
           <button mat-menu-item class="dropdown-item" [routerLink]="['/monsters']">
             <img dropdown-logo src="./../../../assets/icons/monster_black.png">
             <span>Monstros</span>
+          </button>
+          <button mat-menu-item class="dropdown-item" [routerLink]="['/combat']">
+            <img dropdown-logo src="./../../../assets/icons/combat_icon.png">
+            <span>Combate</span>
           </button>
         </mat-menu>
   </div>

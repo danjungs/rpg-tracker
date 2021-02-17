@@ -18,7 +18,13 @@ export const HOME_CARDS = [
     title: 'Monstros',
     path: '/monsters',
     img: getImg('monsters-card.jpg')
-  }
+  },
+  {
+    id: 'card-combat',
+    title: 'Combates',
+    path: '/combat',
+    img: getImg('combat-card.jpg')
+  },
 ];
 
 export const HOME_BANNER = {

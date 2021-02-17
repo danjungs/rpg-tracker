@@ -1,0 +1,14 @@
+<div class="home-container">
+  <div class="banner-container">
+    <app-paralax-banner [data]="combatBanner"></app-paralax-banner>
+  </div>
+  <div class="combat-container">
+    <div class="header-combat">
+      <p class="turns-counter">Turnos: {{turnCounter}}</p>
+      <button mat-mini-fab color="primary" (click)="addToCombatArray()">
+          <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <app-combate-table [dataSource]="combatArray"></app-combate-table>
+  </div>
+</div>

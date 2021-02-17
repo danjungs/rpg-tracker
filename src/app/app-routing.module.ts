@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'monsters',
     loadChildren: () => import('./monsters/monsters.module').then(m => m.MonstersModule)
   },
+  {
+    path: 'combat',
+    loadChildren: () => import('./combat/combat.module').then(m => m.CombatModule)
+  },
 ];
 
 @NgModule({

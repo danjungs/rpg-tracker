@@ -1,0 +1,18 @@
+.banner-container {
+  height: 30vh;
+}
+.home-container {
+  background: #D3D3D3;
+  width: 100%;
+  min-height: 100%;
+}
+.combat-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.header-combat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
