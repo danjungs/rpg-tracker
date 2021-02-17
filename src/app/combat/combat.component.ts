@@ -13,17 +13,19 @@ export class CombatComponent implements OnInit {
     image: 'combat-banner'
   };
   turnCounter = 0;
-  combatArray = [];
-  teste = 'ala'
-  // monsters = JSON.parse(JSON.stringify(MONSTERS));
+  addContent = false;
+  newCombatant;
+  monsters = JSON.parse(JSON.stringify(MONSTERS));
   charactes = JSON.parse(JSON.stringify(CHARACTERS));
   constructor() { }
 
   ngOnInit(): void {
   }
-  addToCombatArray() {
-    const data = this.charactes[0]
-    this.combatArray = [...this.combatArray, data]
+  openAddContent() {
+    this.addContent = !this.addContent;
+  }
+  addToCombatArray(el) {
+    this.newCombatant = el
   }
   rand(max) {
     return Math.floor(Math.random() * max);

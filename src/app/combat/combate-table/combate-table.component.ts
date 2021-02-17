@@ -6,36 +6,29 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/cor
   styleUrls: ['./combate-table.component.scss']
 })
 export class CombateTableComponent implements OnInit, OnChanges {
-  @Input() dataSource =[]
+  @Input() dataSource;
   combatArray = []
-  activeTurn;
+  activeTurn = 0;
   totalTurns = 0
   constructor() { }
 
   ngOnInit(): void {
   }
   ngOnChanges(sp: SimpleChanges) {
-    const changedDataSource = []
-    this.dataSource.forEach(el => changedDataSource.push(this.sanitizeElement(el)))
-    this.combatArray = changedDataSource;
-  }
-  sanitizeElement(element) {
-    return {
-      name: element.header.charname || element.header.monstername,
-      image: element.image,
-      init: this.rand(21),
+    if(this.dataSource) {
+      this.combatArray.push(this.dataSource);
+      this.sortOrder()
     }
   }
   nextTurn() {
-    if (this.activeTurn === this.dataSource.length -1) {
+    if (this.activeTurn === this.combatArray.length -1) {
       this.activeTurn = 0;
       this.totalTurns++;
+      return;
     }
     this.activeTurn++;
   }
-  rand(max) {
-    return Math.floor(Math.random() * max);
-  }
+
   sortOrder() {
     this.combatArray.sort(function(a, b){return b.init - a.init})
   }

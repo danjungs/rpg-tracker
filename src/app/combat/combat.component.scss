@@ -8,11 +8,17 @@
 }
 .combat-container {
   padding: 20px;
+  padding-left: 50px;
+  width: 85%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 .header-combat {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+.turn-counter {
+  padding-left: 40px;
 }

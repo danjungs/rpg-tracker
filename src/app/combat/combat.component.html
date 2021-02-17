@@ -4,11 +4,14 @@
   </div>
   <div class="combat-container">
     <div class="header-combat">
-      <p class="turns-counter">Turnos: {{turnCounter}}</p>
-      <button mat-mini-fab color="primary" (click)="addToCombatArray()">
-          <mat-icon>add</mat-icon>
+      <p class="turn-counter">Turnos: {{turnCounter}}</p>
+      <button mat-mini-fab color="primary" (click)="openAddContent()">
+          <mat-icon>{{addContent? "close" : "add"}}</mat-icon>
       </button>
     </div>
-    <app-combate-table [dataSource]="combatArray"></app-combate-table>
+    <div class="add-content-container" *ngIf="addContent">
+      <app-add-combatant [monsters]="monsters" [charactes]="charactes" (addElement)="addToCombatArray($event)"></app-add-combatant>
+    </div>
+    <app-combate-table [dataSource]="newCombatant"></app-combate-table>
   </div>
 </div>
