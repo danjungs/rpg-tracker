@@ -1,7 +1,7 @@
 export interface MonsterInterface {
   id: string;
   header: HeaderMonsterInterface;
-  attributes?: AttributesMonsterInterface;
+  combat?: AttributesMonsterInterface;
   extraAttributes?: TitleAndTextInterface[];
   challenge: string;
   feats?: TitleAndTextInterface[];

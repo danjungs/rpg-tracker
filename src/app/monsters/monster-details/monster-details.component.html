@@ -15,15 +15,15 @@
       <div class="top-stats">
         <div class="property-line first">
           <h4>Armor Class</h4>
-          <p> {{monster.attributes.ac}}</p>
+          <p> {{monster.combat.ac}}</p>
         </div> <!-- property line -->
         <div class="property-line">
           <h4>Hit Points</h4>
-          <p> {{monster.attributes.hp}}</p>
+          <p> {{monster.combat.hp}}</p>
         </div> <!-- property line -->
         <div class="property-line last">
           <h4>Speed</h4>
-          <p> {{monster.attributes.speed}}</p>
+          <p> {{monster.combat.speed}}</p>
         </div> <!-- property line -->
         <svg height="5" width="100%" class="tapered-rule">
           <polyline points="0,0 400,2.5 0,5"></polyline>
@@ -31,27 +31,27 @@
         <div class="abilities">
           <div class="ability-strength">
             <h4>STR</h4>
-            <p>{{monster.attributes.str.value}} ({{monster.attributes.str.modifier}})</p>
+            <p>{{monster.combat.str.value}} ({{monster.combat.str.modifier}})</p>
           </div> <!-- ability strength -->
           <div class="ability-dexterity">
             <h4>DEX</h4>
-            <p>{{monster.attributes.dex.value}} ({{monster.attributes.dex.modifier}})</p>
+            <p>{{monster.combat.dex.value}} ({{monster.combat.dex.modifier}})</p>
           </div> <!-- ability dexterity -->
           <div class="ability-constitution">
             <h4>CON</h4>
-            <p>{{monster.attributes.con.value}} ({{monster.attributes.con.modifier}})</p>
+            <p>{{monster.combat.con.value}} ({{monster.combat.con.modifier}})</p>
           </div> <!-- ability constitution -->
           <div class="ability-intelligence">
             <h4>INT</h4>
-            <p>{{monster.attributes.int.value}} ({{monster.attributes.int.modifier}})</p>
+            <p>{{monster.combat.int.value}} ({{monster.combat.int.modifier}})</p>
           </div> <!-- ability intelligence -->
           <div class="ability-wisdom">
             <h4>WIS</h4>
-            <p>{{monster.attributes.wis.value}} ({{monster.attributes.wis.modifier}})</p>
+            <p>{{monster.combat.wis.value}} ({{monster.combat.wis.modifier}})</p>
           </div> <!-- ability wisdom -->
           <div class="ability-charisma">
             <h4>CHA</h4>
-            <p>{{monster.attributes.cha.value}} ({{monster.attributes.cha.modifier}})</p>
+            <p>{{monster.combat.cha.value}} ({{monster.combat.cha.modifier}})</p>
           </div> <!-- ability charisma -->
         </div> <!-- abilities -->
         <div class="property-line" *ngFor="let extraAttribute of monster.extraAttributes; let first = first;"

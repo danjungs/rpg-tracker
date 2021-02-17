@@ -15,7 +15,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'any non-good alignment',
     },
-    attributes: {
+    combat: {
       ac: '11 (Armadura de Couro)',
       hp: '32 (5d8 + 10)',
       speed: '30ft',
@@ -49,7 +49,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'any non-lawful alignment',
     },
-    attributes: {
+    combat: {
       ac: '11 (Armadura de Couro)',
       hp: '11 (2d8 + 2)',
       speed: '30ft',
@@ -79,7 +79,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'non',
     },
-    attributes: {
+    combat: {
       ac: '13 (Armadura natural)',
       hp: '11 (2d8 + 2)',
       speed: '40ft',
@@ -112,7 +112,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Grande',
       alignment: 'non'
     },
-    attributes: {
+    combat: {
       ac: '11 (Armadura natural)',
       hp: '39 (6d10 + 6)',
       speed: '20 ft., nado 40 ft.',
@@ -148,7 +148,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'non',
     },
-    attributes: {
+    combat: {
       ac: '11 (Armadura natural)',
       hp: '18 (4d8)',
       speed: '30 ft., nado 30 ft.',
@@ -184,7 +184,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Pequeno',
       alignment: 'non',
     },
-    attributes: {
+    combat: {
       ac: '12 (Armadura natural)',
       hp: '22 (5d8)',
       speed: '0 ft., fly 30 ft.',
@@ -218,7 +218,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'any non-good alignment'
     },
-    attributes: {
+    combat: {
       ac: '13 (Armadura de Couro)',
       hp: '33 (6d8 + 6)',
       speed: '30 ft.',
@@ -256,7 +256,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'any non-good alignment',
     },
-    attributes: {
+    combat: {
       ac: '12 (Armadura de Couro)',
       hp: '9 (2d8)',
       speed: '30 ft.',
@@ -288,7 +288,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Pequeno',
       alignment: 'Neutral Evil',
     },
-    attributes: {
+    combat: {
       ac: '11 (Armadura de Couro)',
       hp: '21 (6d6)',
       speed: '30 ft., voar 30 ft.',
@@ -323,7 +323,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'Neutral Evil'
     },
-    attributes: {
+    combat: {
       ac: '14 (Couro Batido)',
       hp: '45 (6d8 + 18)',
       speed: '30 ft.',
@@ -360,7 +360,7 @@ export const MONSTERS: MonsterInterface[] = [
       size: 'Médio',
       alignment: 'Neutral Evil',
     },
-    attributes: {
+    combat: {
       ac: '8',
       hp: '22 (3d8 + 9)',
       speed: '20 ft.',
