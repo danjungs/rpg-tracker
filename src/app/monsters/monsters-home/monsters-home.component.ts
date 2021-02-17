@@ -18,7 +18,12 @@ export class MonstersHomeComponent implements OnInit {
   dataChanged(evt) {
     const { key, value } = evt;
     this.monsters = MONSTERS.filter(el => {
+      if( key === 'challenge') {
+        const charValue = el.challenge.toLowerCase();
+        return charValue.includes(value.toLowerCase())
+      }
       const charValue = el.header[key].toLowerCase();
-      return charValue.includes(value.toLowerCase())})
+      return charValue.includes(value.toLowerCase())
+    })
   }
 }
