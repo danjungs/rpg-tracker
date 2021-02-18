@@ -15,9 +15,7 @@
       <div class="col col-4" data-label="HP">{{item.ac}}</div>
       <div class="col col-5" data-label="HP">{{item.hp}}</div>
       <div class="col col-6" data-label="Ações">
-          <button mat-flat-button color="warn">Dano</button>
-          <button mat-flat-button color="accent">Cura</button>
-          <button mat-flat-button color="primary">Remover</button>
+          <button mat-flat-button color="primary" (click)="openDialog(item)">Atualizar HP</button>
       </div>
     </li>
   </ul>
