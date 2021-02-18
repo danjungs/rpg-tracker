@@ -26,6 +26,7 @@ export class CombatComponent implements OnInit {
   }
   addToCombatArray(el) {
     this.newCombatant = el
+    this.openAddContent();
   }
   rand(max) {
     return Math.floor(Math.random() * max);

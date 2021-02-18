@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogHPUpdateComponent } from './dialog-hp-update/dialog-hp-update.component';
 
 @Component({
   selector: 'app-combate-table',
@@ -10,7 +12,7 @@ export class CombateTableComponent implements OnInit, OnChanges {
   combatArray = []
   activeTurn = 0;
   totalTurns = 0
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -28,8 +30,16 @@ export class CombateTableComponent implements OnInit, OnChanges {
     }
     this.activeTurn++;
   }
-
   sortOrder() {
     this.combatArray.sort(function(a, b){return b.init - a.init})
+  }
+  openDialog(element): void {
+    const dialogRef = this.dialog.open(DialogHPUpdateComponent, {
+      width: '200px',
+      data: element
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      element.hp = result;
+    });
   }
 }
