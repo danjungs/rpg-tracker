@@ -22,3 +22,9 @@
 .turn-counter {
   padding-left: 40px;
 }
+
+@media (max-width: 600px) {
+  .combat-container {
+    padding-left: 10px !important;
+  }
+}

@@ -1,4 +1,5 @@
 <div class="container">
+  <p class="turn-counter">Turnos: {{totalTurns}}</p>
   <ul class="responsive-table">
     <li class="table-header">
       <div class="col col-1">Icone</div>
@@ -8,16 +9,22 @@
       <div class="col col-5">HP</div>
       <div class="col col-6">Ações</div>
     </li>
-    <li class="table-row" *ngFor="let item of combatArray; let i = index" [class.currentTurn]="i === activeTurn">
+    <li class="table-row" *ngFor="let item of combatArray; let i = index" [class.currentTurn]="i === activeTurn" [class.dead]="item.hp < 1">
       <div class="col col-1" data-label="Icone"><img [src]="item.image" class="character-icon"></div>
       <div class="col col-2" data-label="Nome">{{item.name}}</div>
       <div class="col col-3" data-label="Init">{{item.init}}</div>
       <div class="col col-4" data-label="HP">{{item.ac}}</div>
       <div class="col col-5" data-label="HP">{{item.hp}}</div>
-      <div class="col col-6" data-label="Ações">
-          <button mat-flat-button color="primary" (click)="openDialog(item)">Atualizar HP</button>
+      <div class="col col-6 action-col" data-label="Ações">
+        <div class="update-container">
+          <input type="number" [formControl]="hpChangeFormControl" min="-100" max="100">
+          <button mat-flat-button color="primary" (click)="updateHp(item)">Atualizar HP</button>
+        </div>
+          <button mat-mini-fab color="primary" (click)="removeElement(item)">
+              <mat-icon>close</mat-icon>
+          </button>
       </div>
     </li>
   </ul>
+  <button mat-flat-button color="primary" (click)="nextTurn()">Próximo Turno</button>
 </div>
-<button mat-flat-button color="primary" (click)="nextTurn()">Próximo Turno</button>

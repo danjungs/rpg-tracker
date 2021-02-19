@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogHPUpdateComponent } from './dialog-hp-update/dialog-hp-update.component';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-combate-table',
@@ -12,7 +11,8 @@ export class CombateTableComponent implements OnInit, OnChanges {
   combatArray = []
   activeTurn = 0;
   totalTurns = 0
-  constructor(public dialog: MatDialog) { }
+  hpChangeFormControl = new FormControl();
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -23,23 +23,28 @@ export class CombateTableComponent implements OnInit, OnChanges {
     }
   }
   nextTurn() {
-    if (this.activeTurn === this.combatArray.length -1) {
+    this.activeTurn++;
+    if (this.activeTurn === this.combatArray.length) {
       this.activeTurn = 0;
       this.totalTurns++;
-      return;
     }
-    this.activeTurn++;
+    // if(!this.combatArray[this.activeTurn].hp) {
+    //   this.nextTurn();
+    // }
   }
   sortOrder() {
     this.combatArray.sort(function(a, b){return b.init - a.init})
   }
-  openDialog(element): void {
-    const dialogRef = this.dialog.open(DialogHPUpdateComponent, {
-      width: '200px',
-      data: element
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      element.hp = result;
-    });
+  updateHp(el) {
+    if (!this.hpChangeFormControl.value) {
+      return;
+    }
+    el.hp = Number(el.hp) + Number(this.hpChangeFormControl.value);
+    if( el.hp < 0) {
+      el.hp = 0;
+    }
+  }
+  removeElement(el) {
+    this.combatArray = this.combatArray.filter(element => element != el);
   }
 }

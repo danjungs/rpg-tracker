@@ -12,7 +12,6 @@ export class CombatComponent implements OnInit {
     caption: 'Combate',
     image: 'combat-banner'
   };
-  turnCounter = 0;
   addContent = false;
   newCombatant;
   monsters = JSON.parse(JSON.stringify(MONSTERS));

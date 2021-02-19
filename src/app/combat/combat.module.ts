@@ -7,12 +7,11 @@ import { RouterModule } from '@angular/router';
 import { CombateTableComponent } from './combate-table/combate-table.component';
 import { AddCombatantComponent } from './add-combatant/add-combatant.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DialogHPUpdateComponent } from './combate-table/dialog-hp-update/dialog-hp-update.component';
 
 
 
 @NgModule({
-  declarations: [CombatComponent, CombateTableComponent, AddCombatantComponent, DialogHPUpdateComponent],
+  declarations: [CombatComponent, CombateTableComponent, AddCombatantComponent],
   imports: [
     CommonModule,
     SharedModule,
