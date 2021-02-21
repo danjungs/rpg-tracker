@@ -28,9 +28,6 @@ export class CombateTableComponent implements OnInit, OnChanges {
       this.activeTurn = 0;
       this.totalTurns++;
     }
-    // if(!this.combatArray[this.activeTurn].hp) {
-    //   this.nextTurn();
-    // }
   }
   sortOrder() {
     this.combatArray.sort(function(a, b){return b.init - a.init})
@@ -46,5 +43,8 @@ export class CombateTableComponent implements OnInit, OnChanges {
   }
   removeElement(el) {
     this.combatArray = this.combatArray.filter(element => element != el);
+    if (!this.combatArray.length) {
+      this.totalTurns = 0;
+    }
   }
 }
