@@ -31,5 +31,6 @@ export interface TextAreaCampanhaInterface {
   tag?: string;
   title?: string;
   text?: string | {title: string, text: string};
-  list?: string[]
+  list?: string[],
+  imagePath?: string,
 }

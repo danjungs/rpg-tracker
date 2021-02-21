@@ -12,8 +12,11 @@
       <p [innerHTML]="item" class="normal" ></p>
     </li>
   </ul>
+  <div class="image-container" *ngSwitchCase="'image'">
+    <img [src]="element.imagePath" [alt]="element.imagePath">
+  </div>
   <div class="normal-container" *ngSwitchDefault>
-    <p *ngIf="element.title" [innerHTML]="element.title" class="bolded-title"></p>
+    <p *ngIf="element.title" [innerHTML]="sanitizer.bypassSecurityTrustHtml(element.title)" class="bolded-title"></p>
     <p [innerHTML]="element.text" class="normal"></p>
   </div>
 </div>

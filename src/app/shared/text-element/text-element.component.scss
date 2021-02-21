@@ -1,6 +1,10 @@
 p.normal {
   font-size: 16px;
   line-height: 30px;
+  ::ng-deep a.monster-anchor {
+    text-decoration: none;
+    color: #bc0f0f;
+  }
 }
 .bolded-title {
   font-size: 17px;
@@ -39,5 +43,11 @@ ul.list {
   ::marker {
     color: #683ab6;
     font-size: 1.5em;
+  }
+}
+
+.image-container {
+  img {
+    max-width: 100%;
   }
 }

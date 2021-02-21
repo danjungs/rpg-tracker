@@ -6,5 +6,6 @@ export enum TextEnum {
   TABLE = 'table',
   RULE = 'rule',
   TITLE = 'title',
-  LIST = 'list'
+  LIST = 'list',
+  IMAGE = 'image'
 }
