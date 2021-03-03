@@ -16,9 +16,15 @@
       <div class="col col-4" data-label="HP">{{item.ac}}</div>
       <div class="col col-5" data-label="HP">{{item.hp}}</div>
       <div class="col col-6 action-col" data-label="Ações">
+        <div class="dummy"></div>
         <div class="update-container">
-          <input type="number" [formControl]="hpChangeFormControl" min="-100" max="100">
-          <button mat-flat-button color="primary" (click)="updateHp(item)">Atualizar HP</button>
+          <button mat-mini-fab color="warm" (click)="updateHp(item, 'minus')">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+          <input [formControl]="hpChangeFormControl">
+          <button mat-mini-fab color="warm" (click)="updateHp(item, 'add')">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          </button>
         </div>
           <button mat-mini-fab color="primary" (click)="removeElement(item)">
               <mat-icon>close</mat-icon>

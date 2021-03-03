@@ -26,6 +26,9 @@ li {
   padding: 5px 10px;
   box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
 }
+.col {
+  text-align: center;
+}
 .col-1 {
   flex-basis: 50%;
 }
@@ -36,7 +39,14 @@ li {
   flex-basis: 25%;
 }
 .input-row {
-  width: 40px;
+  height: 30px;
+  width: 50px;
+  border-radius: 20px;
+  border: 2px solid #683ab6 ;
+  text-align: center;
+}
+*:focus {
+  outline: none;
 }
 .button-end {
   margin: 0 auto;

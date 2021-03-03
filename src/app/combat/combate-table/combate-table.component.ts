@@ -32,11 +32,12 @@ export class CombateTableComponent implements OnInit, OnChanges {
   sortOrder() {
     this.combatArray.sort(function(a, b){return b.init - a.init})
   }
-  updateHp(el) {
-    if (!this.hpChangeFormControl.value) {
+  updateHp(el, direction) {
+    if (!this.hpChangeFormControl.value || isNaN(this.hpChangeFormControl.value)) {
       return;
     }
-    el.hp = Number(el.hp) + Number(this.hpChangeFormControl.value);
+    direction === 'add' ? el.hp = Number(el.hp) + Number(this.hpChangeFormControl.value) :
+      el.hp = Number(el.hp) - Number(this.hpChangeFormControl.value);
     if( el.hp < 0) {
       el.hp = 0;
     }
