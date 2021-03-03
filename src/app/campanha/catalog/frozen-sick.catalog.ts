@@ -611,9 +611,12 @@ export const FROZEN_SICK: CampanhaInterface = {
             'Ele também contém a riqueza de Hulil - 415 cp, 234 sp, 43 ep e 112 gp - e um recibo indicando que Hulil vendeu um frasco de vidro azul para Irven Liel por 100 po.'
         },
         {
-          type: TextEnum.NORMAL,
-          title: 'Desenvolvimento',
+          type: TextEnum.TITLE,
+          text: 'Desenvolvimento',
           tag: 'cavernDevelopment',
+        },
+        {
+          type: TextEnum.NORMAL,
           text: 'Quando os personagens terminarem de explorar a Caverna Croaker, eles deverão saber que os frascos de vidro azul encontrados por Urgon Wenth são a fonte da estranha doença que está transformando as pessoas em estátuas de gelo, ' +
             'e que Irven Liel tem um desses frascos. Se os personagens não tiverem a chance de questionar Hulil ou Raegrin, você pode fazer com que o baú também contenha um diário ou notas que forneçam as informações de que precisam e os direcione para a pousada Anão Alegre.'
         },
